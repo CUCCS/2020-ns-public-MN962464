@@ -73,8 +73,8 @@
     ```
     apt update && apt install dnsmasq
     vi /etc/dnsmasq.conf
-    vi /etc/dnsmasq.d/gw-enp010.conf
-    vi /etc/dnsmasq.d/gw-enp09.conf
+    vi /etc/dnsmasq.d/gw-enp0s10.conf
+    vi /etc/dnsmasq.d/gw-enp0s9.conf
     ```
     将该链接中对应文件的内容分别写入：https://gist.github.com/c4pr1c3/8d1a4550aa550fabcbfb33fad9718db1
 
@@ -93,6 +93,7 @@
 * 可以单方向ping通网络
 ![image](img/XP1单方向连通网络.jpg)
 * IP地址
+
 ![image](img/xp1_ip地址.jpg)
 ![image](img/xp1.jpg)
 
@@ -149,7 +150,7 @@ apt insatll tcpdump
 ![image](img/kali_vic.png)
 
 + Kali_Victim上下流量通过网关
-![image](img/kali_victim_ip.jpg)
+![image](img/kali_vic_tc.png)
 
 + Debian_Victim可以正常上网
 ![image](img/debian_victim.jpg)
