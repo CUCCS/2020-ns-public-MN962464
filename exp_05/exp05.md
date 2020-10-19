@@ -25,7 +25,7 @@
 ![img](img/Attacker_connectivity_tests.png)
 
 - Kali-Victim
-![img](/img/Victim_connectivity_tests.png)
+![img](img/Victim_connectivity_tests.png)
 
 - 攻击者和靶机都开了两块网卡，网卡1是内部网络，网卡2是host-only网卡，方便VSCode连接虚拟机(~~为了字大复制粘贴方便和编辑py文件方便~~)(~~顺便证明我的结果都是我亲自跑了的，因为我VScode有着美丽且独特的紫色背景~~)
 
@@ -43,7 +43,7 @@
 ![img](img/Target%20machine%20port%20scanning.png)
 结果显示除了SSH端口开放没有别的端口开放
 
-#####扫描技术实现
+##### 扫描技术实现
 
 #### TCP connect scan
 - 实现原理
@@ -58,6 +58,7 @@
 ##### closed
 
 - Attacker
+
 ![img](img/python%20connect%20port%2080%20closed%20result.png)
 
 - 利用wireshark分析Victim抓包结果
@@ -68,9 +69,11 @@
 
 ##### open
 - Victim开启80端口
+
 ![img](img/connect_Port%2080%20on.png)
 
 - Attacker
+
 ![img](img/python%20connect%20port%2080%20open%20result.png)
 
 - wireshark分析Victim抓包结果
@@ -85,6 +88,7 @@
 ![img](img/connect_Port%2080%20filter.png)
 
 - Attacker
+
 ![img](img/python%20connect%20port%2080%20filtered.png)
 
 - wireshark分析Victim抓包结果
@@ -107,9 +111,13 @@
 ##### closed
 
 - Victim
+
+
 ![img](img/port%2080%20off.png)
 
 - Attacker
+
+
 ![img](img/python%20stealth%20port%2080%20closed.png)
 
 - wireshark分析Victim抓包结果
@@ -124,6 +132,8 @@
 ![img](img/port%2080%20open.png)
 
 - Attacker
+
+
 ![img](img/python%20stealth%20port%2080%20open.png)
 
 - wireshark分析Victim抓包结果
@@ -138,6 +148,8 @@
 ![img](img/Port%2080%20filtered.png)
 
 - Attacker
+
+
 ![img](img/python%20stealth%20port%2080%20filterd.png)
 
 - wireshark分析Victim抓包结果
@@ -159,9 +171,13 @@ Xmas发送一个TCP包，并对TCP报文头FIN、URG和PUSH标记进行设置。
 ##### closed
 
 - Victim
+
+
 ![img](img/port%2080%20off.png)
 
 - Attacker
+
+
 ![img](img/python%20Xmas%20port%20closed.png)
 
 - wireshark分析Victim抓包结果
@@ -173,9 +189,13 @@ Xmas发送一个TCP包，并对TCP报文头FIN、URG和PUSH标记进行设置。
 ##### open
 
 - Victim开启80端口
+
+
 ![img](img/port%2080%20open.png)
 
 - Attacker
+
+
 ![img](img/python%20Xmas%20port%20open.png)
 
 - wireshark分析Victim抓包结果
@@ -207,9 +227,13 @@ Xmas发送一个TCP包，并对TCP报文头FIN、URG和PUSH标记进行设置。
 ##### closed
 
 - Victim
+
+
 ![img](img/port%2080%20off.png)
 
 - Attacker
+
+
 ![img](img/python%20fin%20port%20closed.png)
 
 - wireshark分析Victim抓包结果
@@ -221,9 +245,13 @@ Xmas发送一个TCP包，并对TCP报文头FIN、URG和PUSH标记进行设置。
 ##### open
 
 - Victim开启80端口
+
+
 ![img](img/fin%20port%2080%20on.png)
 
 - Attacker
+
+
 ![img](img/python%20fin%20port%20open.png)
 
 - wireshark分析Victim抓包结果
@@ -236,9 +264,13 @@ Xmas发送一个TCP包，并对TCP报文头FIN、URG和PUSH标记进行设置。
 ##### filtered
 
 - Victim将80端口设为拒绝状态并在防火墙中过滤
+
+
 ![img](img/Port%2080%20filtered.png)
 
 - Attacker
+
+
 ![img](img/python%20fin%20port%20filtered.png)
 
 - wireshark分析Victim抓包结果
@@ -255,9 +287,13 @@ Xmas发送一个TCP包，并对TCP报文头FIN、URG和PUSH标记进行设置。
 ##### closed
 
 - Victim
+
+
 ![img](img/port%2080%20off.png)
 
 - Attacker
+
+
 ![img](img/python%20null%20port%20closed.png)
 
 - wireshark分析Victim抓包结果
@@ -269,9 +305,13 @@ Xmas发送一个TCP包，并对TCP报文头FIN、URG和PUSH标记进行设置。
 ##### open
 
 - Victim开启80端口
+
+
 ![img](img/fin%20port%2080%20on.png)
 
 - Attacker
+
+
 ![img](img/python%20null%20port%20open.png)
 
 - wireshark分析Victim抓包结果
@@ -284,9 +324,13 @@ Xmas发送一个TCP包，并对TCP报文头FIN、URG和PUSH标记进行设置。
 ##### filtered
 
 - Victim将80端口设为拒绝状态并在防火墙中过滤
+
+
 ![img](img/Port%2080%20filtered.png)
 
 - Attacker
+
+
 ![img](img/python%20null%20port%20filtered.png)
 
 - wireshark分析Victim抓包结果
@@ -310,6 +354,8 @@ Xmas发送一个TCP包，并对TCP报文头FIN、URG和PUSH标记进行设置。
 ##### closed
 
 - Attacker
+
+
 ![img](img/python%20UDP%20closed.png)
 
 - wireshark分析Victim抓包结果
@@ -321,9 +367,13 @@ Xmas发送一个TCP包，并对TCP报文头FIN、URG和PUSH标记进行设置。
 ##### open
 
 - Victim开启80端口
+
+
 ![img](img/UDP%20port%20on.png)
 
 - Attacker
+
+
 ![img](img/python%20UDP%20open.png)
 
 - wireshark分析Victim抓包结果
@@ -386,9 +436,10 @@ Xmas发送一个TCP包，并对TCP报文头FIN、URG和PUSH标记进行设置。
     matplotlib.use('Agg') 
     ```
     如下：
-    ![img](img/python%20null%20port%20closed.png)
 
-    但是由于~~偷懒~~时间关系有的代码没改，但是不影响输出结果，只影响输出长度...
+![img](img/python%20null%20port%20closed.png)
+
+但是由于~~偷懒~~时间关系有的代码没改，但是不影响输出结果，只影响输出长度...
 
 2. 这个实验真的好麻烦(截图圈图心好累)，我做到Xmas的时候open结果跟前两个不同，我一直以为出错了，后来发现原理变了我没记住，并且一直调试网卡状态耗费时间
 端口状态用`iptables -A INPUT -p tcp -m tcp --dport 80 -j REJECT`设置过滤后，就一直变成了过滤，改不过来
